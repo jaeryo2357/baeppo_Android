@@ -17,6 +17,9 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
         binding.registerButton.setOnClickListener {
             //TODO: 회원가입 로직 작성
         }
+        binding.registerSchoolText.setOnClickListener {
+            //TODO: 학교 인증
+        }
     }
 
     fun showIdCheckSuccessLayout() {

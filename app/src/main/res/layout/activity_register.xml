@@ -67,7 +67,7 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/registerIdTitle" />
+            app:layout_constraintTop_toBottomOf="@id/registerIdTitle" />
 
         <TextView
             android:id="@+id/registerPasswordTitle"
@@ -82,7 +82,7 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/registerIdEditText" />
+            app:layout_constraintTop_toBottomOf="@id/registerIdEditText" />
 
         <EditText
             android:id="@+id/registerPasswordEditText"
@@ -101,7 +101,7 @@
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/registerPasswordTitle" />
+            app:layout_constraintTop_toBottomOf="@id/registerPasswordTitle" />
 
         <TextView
             android:id="@+id/registerPasswordCheckTitle"
@@ -116,7 +116,7 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/registerPasswordEditText" />
+            app:layout_constraintTop_toBottomOf="@id/registerPasswordEditText" />
 
         <EditText
             android:id="@+id/registerPasswordCheckEditText"
@@ -135,7 +135,7 @@
             android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/registerPasswordCheckTitle" />
+            app:layout_constraintTop_toBottomOf="@id/registerPasswordCheckTitle" />
 
         <TextView
             android:id="@+id/registerSchoolTitle"
@@ -150,27 +150,29 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/registerPasswordCheckEditText" />
+            app:layout_constraintTop_toBottomOf="@id/registerPasswordCheckEditText" />
 
-        <EditText
-            android:id="@+id/registerSchoolEditText"
+        <TextView
+            android:id="@+id/registerSchoolText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:minHeight="@dimen/height_edittext"
             android:layout_marginStart="18dp"
             android:layout_marginEnd="18dp"
+            android:clickable="true"
+            android:focusable="true"
             android:paddingStart="12dp"
-            android:background="@drawable/bg_corner_stroke"
+            android:background="@drawable/bg_ripple_stroke"
             android:paddingEnd="12dp"
             android:importantForAutofill="no"
             android:textSize="14sp"
-            android:drawableRight="@drawable/ic_search"
             android:lines="1"
             android:hint="@string/register_school_hint"
-            android:inputType="none"
+            android:gravity="center|start"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/registerSchoolTitle" />
+            app:layout_constraintTop_toBottomOf="@id/registerSchoolTitle"
+            app:drawableEndCompat="@drawable/ic_search" />
 
         <Button
             android:id="@+id/registerButton"
@@ -186,7 +188,7 @@
             android:backgroundTint="@color/primary_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/registerSchoolEditText" />
+            app:layout_constraintTop_toBottomOf="@id/registerSchoolText" />
 
         <TextView
             android:id="@+id/registerIdResult"
@@ -199,9 +201,9 @@
             android:textColor="@color/red_color"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/registerIdEditText"
+            app:layout_constraintBottom_toTopOf="@id/registerIdEditText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/registerIdTitle" />
+            app:layout_constraintStart_toEndOf="@id/registerIdTitle" />
 
         <TextView
             android:id="@+id/registerPasswordResult"
@@ -214,10 +216,8 @@
             android:textColor="@color/primary_color"
             android:textSize="14sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/registerPasswordCheckEditText"
+            app:layout_constraintBottom_toTopOf="@id/registerPasswordCheckEditText"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/registerPasswordCheckTitle" />
-
-
+            app:layout_constraintStart_toEndOf="@id/registerPasswordCheckTitle" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
