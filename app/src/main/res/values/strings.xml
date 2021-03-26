@@ -44,4 +44,10 @@
     <string name="search_place_header">%1$s 검색결과</string>
     <string name="search_result_none">검색한 결과가 없습니다.</string>
     <string name="empty_search_address">검색할 장소를 입력해주세요</string>
+    <!-- 학교 검색 페이   -->
+    <string name="school_title">학교 검색</string>
+    <string name="school_content">학교명</string>
+    <string name="school_confirm">확인</string>
+    <string name="school_search_hint">재학중인 학교를 검색해주세요</string>
+    <string name="school_result_address">주소</string>
 </resources>
