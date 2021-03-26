@@ -1,10 +1,12 @@
 package com.mashup.ipdam.ui.register
 
+import android.content.Intent
 import android.view.View
 import androidx.core.content.ContextCompat
 import com.mashup.base.BaseActivity
 import com.mashup.ipdam.R
 import com.mashup.ipdam.databinding.ActivityRegisterBinding
+import com.mashup.ipdam.ui.school.SchoolActivity
 
 class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity_register) {
     override var logTag: String = "RegisterActivity"
@@ -19,6 +21,8 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding>(R.layout.activity
         }
         binding.registerSchoolText.setOnClickListener {
             //TODO: 학교 인증
+            val intent = Intent(this, SchoolActivity::class.java)
+            startActivity(intent)
         }
     }
 
